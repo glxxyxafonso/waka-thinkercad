@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Thinkerwaka - Wakatime for Thinkercad",
+    "version": "1.0",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["https://www.tinkercad.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.tinkercad.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
