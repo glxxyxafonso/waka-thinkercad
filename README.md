@@ -1,2 +1,2 @@
-# waka-thinkercad
-Register your thinkercad hours on Wakatime/Hackatime!
+# Wakatime - Tinkercad Integration
+Register your tinkercad hours on Wakatime/Hackatime!
