@@ -6,6 +6,6 @@ timer = null;
 function logActivity() {
   if (timer) clearTimeout(timer);
   timer = setTimeout(() => {
-    chrome.runtime.sendMessage({ type: "logTime" });
+    extAPI.runtime.sendMessage({ type: "logTime" });
   }, 10000); // Logs activity every 10 seconds of continuous use
 }
