@@ -1,7 +1,7 @@
-const extAPI = typeof browser !== "undefined" ? browser : chrome; // Chrome and Firefox compatibility
+const extAPI = typeof browser !== "undefined" ? browser : chrome;
 
 document.addEventListener("DOMContentLoaded", () => {
-    extAPI.storage.sync.get(["apiUrl", "apiKey"], (data) => {
+    extAPI.storage.sync.get(["apiUrl", "apiKey"]).then((data) => {
         document.getElementById("apiUrl").value = data.apiUrl || "";
         document.getElementById("apiKey").value = data.apiKey || "";
     });

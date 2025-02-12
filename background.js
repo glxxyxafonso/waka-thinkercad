@@ -1,4 +1,4 @@
-const extAPI = typeof browser !== "undefined" ? browser : chrome; // Firefox and Chrome compatibility
+const extAPI = typeof browser !== "undefined" ? browser : chrome;
 
 extAPI.runtime.onInstalled.addListener(() => {
   extAPI.storage.sync.set({
@@ -9,7 +9,7 @@ extAPI.runtime.onInstalled.addListener(() => {
 
 extAPI.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "logTime") {
-    extAPI.storage.sync.get(["apiUrl", "apiKey"], (data) => {
+    extAPI.storage.sync.get(["apiUrl", "apiKey"]).then((data) => {
       if (!data.apiKey) {
         console.warn("API Key is not set");
         return;
