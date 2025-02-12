@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Tinkercad WakaTime Integration",
-  "version": "1.0",
+  "name": "Tinkerwaka",
+  "version": "0.3",
   "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": ["https://www.tinkercad.com/*"],
   "background": {
